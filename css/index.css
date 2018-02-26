@@ -1,0 +1,106 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+@media ( orientation : landscape) {
+	body {
+		padding: 0;
+		margin: 0;
+		height: 50%;
+		display: block;
+		background-color: teal;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+}
+
+@supports (-webkit-overflow-scrolling: touch ) { #ball {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: grey;
+	z-index: 200;
+	-webkit-transition: all;
+  transition: all;
+}
+
+}
+@supports not (-webkit-overflow-scrolling: touch ) { #ball {
+	position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: blue;
+  z-index: 200;
+  -webkit-transition: all;
+  transition: all;
+}
+
+}
+@media ( orientation : portrait) {
+	body {
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		background-color: teal;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+#pause {
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 10%;
+  z-index: 1000;
+  visibility: hidden;
+}
+
+#over {
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 10%;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  
+.goal {
+	-webkit-transition: all;
+	transition: all;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: white;
+	z-index: 200;
+}
+
+.metainfo {
+	-webkit-transition: all;
+	transition: all;
+	position: absolute;
+	color: white;
+	font-size: x-large;
+	z-index: 300;
+}
