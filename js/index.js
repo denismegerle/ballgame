@@ -176,6 +176,8 @@ function initMobile() {
 }
 
 function initDesktop() {
+	document.getElementById('over').innerHTML = "Click R ro reset game";
+	
 	document.onkeydown = function(e) {
 		e = e || window.event;
 		var charCode = e.keyCode;
